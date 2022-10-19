@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+
+      var fiyat=1000;
+      var indmiktari=10;
+      var ite=1;
+      function fiyatazalt() {
+
+        /*
+        if(document.getElementById("li2").innerText==""){
+        for (var i = 1; i <= 6; i++) {
+          document.getElementById("li"+i).innerHTML=fiyat;
+        }
+        }*/
+        if(ite==1){
+          document.getElementById("li6").innerHTML=fiyat;
+          document.getElementById("li1").innerHTML=fiyat;
+        }
+        if(ite==2){
+          document.getElementById("li6").innerHTML=fiyat;
+          document.getElementById("li5").innerHTML=(fiyat)+(indmiktari);
+        }
+        if(ite==3){
+          document.getElementById("li6").innerHTML=fiyat;
+          document.getElementById("li5").innerHTML=(fiyat)+(indmiktari);
+          document.getElementById("li4").innerHTML=(fiyat)+(indmiktari*2);
+        }
+        if(ite==4){
+          document.getElementById("li6").innerHTML=fiyat;
+          document.getElementById("li5").innerHTML=(fiyat)+(indmiktari);
+          document.getElementById("li4").innerHTML=(fiyat)+(indmiktari*2);
+          document.getElementById("li3").innerHTML=(fiyat)+(indmiktari*3);
+        }
+        if(ite==5){
+          document.getElementById("li6").innerHTML=fiyat;
+          document.getElementById("li5").innerHTML=(fiyat)+(indmiktari);
+          document.getElementById("li4").innerHTML=(fiyat)+(indmiktari*2);
+          document.getElementById("li3").innerHTML=(fiyat)+(indmiktari*3);
+          document.getElementById("li2").innerHTML=(fiyat)+(indmiktari*4);
+        }
+        if(ite>5){
+          document.getElementById("li6").innerHTML=fiyat;
+          document.getElementById("li5").innerHTML=(fiyat)+(indmiktari);
+          document.getElementById("li4").innerHTML=(fiyat)+(indmiktari*2);
+          document.getElementById("li3").innerHTML=(fiyat)+(indmiktari*3);
+          document.getElementById("li2").innerHTML=(fiyat)+(indmiktari*4)
+        }
+
+        //document.getElementById("li6").innerHTML=fiyat;
+        /*
+        document.getElementById("li5").innerHTML=(fiyat)+(indmiktari);
+        document.getElementById("li4").innerHTML=(fiyat)+(indmiktari*2);
+        document.getElementById("li3").innerHTML=(fiyat)+(indmiktari*3);
+        document.getElementById("li2").innerHTML=(fiyat)+(indmiktari*4);*/
+
+        /*
+        var eli5=document.getElementById("li5");
+        console.log(eli5.innerText);
+        //console.log(eli5);
+        //eli5.innerHTML=(fiyat)+(indmiktari);
+        /*if (eli5.innerText>=fiyat){
+          console.log("burada");
+          document.getElementById("li5").innerHTML=fiyat;
+          }
+          */
+        //eli5.innerHTML=(fiyat)+(indmiktari);
+        /*
+        if(document.getElementById("li5").innerHTML==""){
+          if (document.getElementById("li5").innerText>fiyat) {
+            console.log(document.getElementById("li5").innerText+" "+fiyat);
+          }
+          document.getElementById("li5").innerHTML=fiyat;
+        } else{
+        document.getElementById("li5").innerHTML=(fiyat)+(indmiktari);
+        document.getElementById("li4").innerHTML=(fiyat)+(indmiktari*2);
+        document.getElementById("li3").innerHTML=(fiyat)+(indmiktari*3);
+        document.getElementById("li2").innerHTML=(fiyat)+(indmiktari*4);
+        }
+        if (document.getElementById("li1").innerHTML=="") {
+          document.getElementById("li1").innerHTML=fiyat;
+        }
+        */
+
+        fiyat=fiyat-indmiktari;
+        //console.log(fiyat);
+        ite++;
+        if(ite==6){
+          ite=10;
+        }
+        setTimeout("fiyatazalt()", 1000);
+        //fiyatazalt(fiyat);
+      }
+    </script>
+  </head>
+  <body >
+    <button onclick="fiyatazalt()">Fiyat Azalt</button>
+    <ul>
+      <li id="li1"></li>
+      <li id="li2"></li>
+      <li id="li3"></li>
+      <li id="li4"></li>
+      <li id="li5"></li>
+      <li id="li6"></li>
+    </ul>
+
+  </body>
+</html>

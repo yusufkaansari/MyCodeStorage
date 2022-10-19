@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script type="text/javascript">
+    function kontrol(){
+      var cinsiyet=document.getElementsByName("cinsiyet");
+      if(cinsiyet[0].checked){
+        alert("Hoşgeldiniz hanımefendi");
+      }
+      else if (cinsiyet[1].checked){
+        alert("Hoşgeldiniz beyefendi");
+      }
+      else
+        alert("Lütfen cinsiyetinizi seçiniz");
+    }
+  </script>
+</head>
+
+<body>
+  <h3>Lütfen cinsiyetinizi seçiniz</h3>
+  <input type="radio" id="cins1" name="cinsiyet" value="1"/>
+  <label for="cins1">Kadın</label>
+  <input type="radio" id="cins2" name="cinsiyet" value="2"/>
+  <label for="cins2">Erkek</label>
+  <br>
+  <button type="button" onclick="kontrol()">Cinsiyet Seç</button>
+</body>
+
+</html>

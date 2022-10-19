@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<p>Click the button to create a BASE element.</p>
+
+<button onclick="myFunction()">Try it</button>
+<a href="">A etiketi href=https://www.w3schools.com" olmalı</a>
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.createElement("BASE");
+  x.setAttribute("href", "https://www.w3schools.com");
+  document.head.appendChild(x);
+
+  document.getElementById("demo").innerHTML = "You have now created a BASE element in the HEAD section of your document.";
+}
+</script>
+
+</body>
+</html>

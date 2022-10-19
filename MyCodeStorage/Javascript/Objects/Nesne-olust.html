@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Objects</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        // Create an object:
+        var Person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue",
+            tanitim: function () {
+                return "Adi:" + this.firstName + " Yasi: " + this.age;
+            }
+        };
+        // nesne içinde fonsiyon oluşturduğumuz için isim verilmez
+        // Display some data from the object:
+        document.getElementById("demo").innerHTML = Person.firstName + " is " + Person.age + " years old.<br>" + Person.tanitim();
+
+    </script>
+
+</body>
+
+</html>

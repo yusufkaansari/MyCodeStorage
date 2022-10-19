@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="javascript:checkoutCookies()">
+    <script>
+        function checkCookies() {
+            var message = "";
+            if (navigator.cookieEnabled == false) {
+                message = "Siteni düzgün çalışması için cookie ayarlarınızı aktifleştirmeniz gerekmektedir";
+            } else {
+                message = "Cookie aktif";
+            }
+            alert(message);
+        }
+    </script>
+</body>
+
+</html>

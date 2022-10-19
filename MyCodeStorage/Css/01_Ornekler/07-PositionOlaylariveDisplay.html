@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <title>Position Olaylari ve Display</title>
+    <!--position yapısı html etiketleri üzerinden istediği yere gezinebilen bir yapı-->
+    <style>
+
+        #div1 {
+
+            height: 20px;
+
+            width: 100%;
+
+            background-color: red;
+
+            position: fixed;
+
+            left: 0;
+
+            top: 0;
+
+        }
+
+        #div2 {
+
+            height: 20px;
+
+            width: 100px;
+
+            background-color: black;
+
+            position: absolute;
+
+            right: 0;
+
+            bottom: 0;
+
+            display:inherit;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="div1"></div>
+
+    <div style="margin-top:20px;background-color:yellow;height:8000px;"></div>
+
+    <div id="div2"></div>
+
+</body>
+
+</html>

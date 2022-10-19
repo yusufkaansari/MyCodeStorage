@@ -1,0 +1,27 @@
+<button onclick="tikla()">Tıkla</button>
+
+<script>
+	function tikla() {
+		alert("butona tıklandı...");
+	}
+</script>
+
+//this. demek buton içeriğine ulaşmamızı sağlar.
+
+<!----------------------------------------------------------->
+
+<button onclick="tikla(this)">Tıkla</button>
+
+<script>
+	function tikla(element) {
+		element.innerHTML = "Butona Tıklandı...";
+	}
+</script>
+
+
+<!-- --------------------------------------------------------->
+<script>
+	if (document.getElementById('button').clicked == true) {
+		alert("button was clicked");
+	}
+</script>

@@ -1,0 +1,253 @@
+
+.modal-header{
+  padding-top: 5px;
+  border-bottom: 0;
+  padding-left: 30px;
+  padding-right: 15px;
+}
+.modal-body{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.modal-footer{
+  padding-left: 30px;
+  padding-right: 30px;
+  border-top:none;
+}
+.modal-header .close {
+  padding-right: 0.5rem;
+}
+.modal-title{
+  font-size:30px;
+}
+
+.close-icon {
+  background: url(gg_close.svg) no-repeat top left;
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  color: #0000;
+}
+
+.input-group-sm>.input-group-prepend>.input-group-text {
+    padding: 0.8rem 0.8rem;
+    background-color:#F1F1F1;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.input-group-sm>.input-group-endpend>.input-group-text {
+  padding: 0.8rem 0.8rem;
+  background-color:#F1F1F1;
+  border-radius: 0px 5px 5px 0px;
+  border-left-color: #F1F1F1;
+}
+
+.input-group-sm>.form-control{
+  border-radius: 5px;
+}
+
+.mail-icon {
+  background: url(simple-icons_mail-dot-ru.svg) no-repeat top center;
+
+}
+.phone-icon {
+  background: url(phone.svg) no-repeat top center;
+
+}
+.password-icon {
+  background: url(vaadin_password.svg) no-repeat top center;
+}
+.eye-close-icon {
+  background: url(ant-design_eye-invisible-outlined.svg) no-repeat top center;
+  background-size: contain;
+  height: 22px;
+  width: 22px;
+
+}
+
+.icon-size{
+  background-size: contain;
+  height: 20px;
+  width: 20px;
+}
+.form-control-bg {
+  background-color:#F1F1F1;
+}
+.form-control-bg-noborder {
+  background-color:#F1F1F1;
+  border-right: none;
+}
+.form-control::placeholder {
+  color: #B7B7B7;
+  font-size:18px;
+
+}
+.button-no-outline[type="button"]{
+  outline:none;
+  border:none;
+}
+.modal-backdrop.show {
+    background-color: #080C2D;
+    opacity: 0.72;
+}
+.button-uyeol{
+  width: 100%;
+  background: linear-gradient(180deg, #06F49F 0%, #07CE1B 100%);
+  border-radius: 5px;
+  outline:none;
+  border:none;
+}
+
+.modal-header{
+  padding-top: 5px;
+  border-bottom: 0;
+  padding-left: 30px;
+  padding-right: 15px;
+}
+.modal-body{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.modal-footer{
+  padding-left: 30px;
+  padding-right: 30px;
+  border-top:none;
+}
+.modal-header .close {
+  padding-right: 0.5rem;
+}
+.modal-title{
+  font-size:30px;
+}
+
+.close-icon {
+  background: url(gg_close.svg) no-repeat top left;
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  color: #0000;
+}
+
+.input-group-sm>.input-group-prepend>.input-group-text {
+    padding: 0.8rem 0.8rem;
+    background-color:#F1F1F1;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.input-group-sm>.input-group-endpend>.input-group-text {
+  padding: 0.8rem 0.8rem;
+  background-color:#F1F1F1;
+  border-radius: 0px 5px 5px 0px;
+  border-left-color: #F1F1F1;
+}
+
+.input-group-sm>.form-control{
+  border-radius: 5px;
+}
+
+.mail-icon {
+  background: url(simple-icons_mail-dot-ru.svg) no-repeat top center;
+
+}
+.phone-icon {
+  background: url(phone.svg) no-repeat top center;
+
+}
+.password-icon {
+  background: url(vaadin_password.svg) no-repeat top center;
+}
+.eye-close-icon {
+  background: url(ant-design_eye-invisible-outlined.svg) no-repeat top center;
+  background-size: contain;
+  height: 22px;
+  width: 22px;
+
+}
+
+
+.icon-size{
+  background-size: contain;
+  height: 20px;
+  width: 20px;
+}
+.form-control-bg {
+  background-color:#F1F1F1;
+}
+.form-control-bg-noborder {
+  background-color:#F1F1F1;
+  border-right: none;
+}
+.form-control::placeholder {
+  color: #B7B7B7;
+  font-size:18px;
+
+}
+.button-no-outline[type="button"]{
+  outline:none;
+  border:none;
+}
+.modal-backdrop.show {
+    background-color: #080C2D;
+    opacity: 0.72;
+}
+.button-uyeol{
+  width: 100%;
+  background: linear-gradient(180deg, #06F49F 0%, #07CE1B 100%);
+  border-radius: 5px;
+  outline:none;
+  border:none;
+  font-size:18px;
+  text-align: center;
+}
+.azpaddingtop{
+  padding-top:5px
+}
+.azpaddingbottom{
+  padding-bottom:5px
+}
+.user-icon {
+  background: url(user.svg) no-repeat;
+  background-size: contain;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  vertical-align:sub;
+  }
+
+.button-girisyap{
+  min-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(180deg, #F49506 0%, #CE6707 100%);
+  border-radius: 5px;
+  outline:none;
+  border:none;
+  font-size:18px;
+  text-align: center;
+}
+.modal-footer> button:active{
+  box-shadow: 0 5px #0000;
+  transform: translateY(4px);
+  background-color: #080C2D !important;
+}
+
+.footer2{
+
+}
+.girisyap-icon {
+  background: url(girisyap.svg) no-repeat;
+  background-size: contain;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  vertical-align:sub;
+  outline:none;
+  }
+.spanveya{
+  width: 100%;
+  text-align: center;
+}

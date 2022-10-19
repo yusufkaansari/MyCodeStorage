@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!-- Fontawesome Icons -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- JQuery  -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+
+    <!-- Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <input class="form-control" type="text" id="FilterInputID" placeholder="Search..">
+        <br>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="FilterTable">
+                <tr>
+                    <th>Yusuf</th>
+                    <th>Sari</th>
+                    <th>yusuf@hotmail.com</th>
+                </tr>
+                <tr>
+                    <th>Şükrü</th>
+                    <th>İsa</th>
+                    <th>İsahotmail.com</th>
+                </tr>
+                <tr>
+                    <th>Ali</th>
+                    <th>kara</th>
+                    <th>dark@hotmail.com</th>
+                </tr>
+                <tr>
+                    <th>Ahmet</th>
+                    <th>beyaz</th>
+                    <th>white@hotmail.com</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br><br><br>
+    <div class="container">
+        <input class="form-control" type="text" id="FilterInputIDList" placeholder="Search..">
+        <ul class="list-group" id="FilterList">
+            <li class="list-group-item">Php</li>
+            <li class="list-group-item">HTML</li>
+            <li class="list-group-item">CSS</li>
+            <li class="list-group-item">JS</li>
+            <li class="list-group-item">C#</li>
+            <li class="list-group-item">Asp.net</li>
+        </ul>
+        <br>
+
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#FilterInputID').on('keyup', function () {
+                var value = $(this).val().toLowerCase();
+                $('#FilterTable tr').filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                });
+            });
+
+            $('#FilterInputIDList').on('keyup', function () {
+                var value = $(this).val().toLowerCase();
+                $('#FilterList li').filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

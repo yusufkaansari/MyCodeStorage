@@ -1,0 +1,4 @@
+.class1{
+  background: rgb(0,238,102);
+  background: linear-gradient(90deg, rgba(0,238,102,1) 22%, rgba(6,122,224,1) 81%);
+}

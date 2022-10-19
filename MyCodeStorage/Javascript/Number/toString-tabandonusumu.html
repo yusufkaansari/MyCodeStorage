@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toString - Taban Dönüşümü</title>
+</head>
+
+<body onload="printScreen();">
+    <p id="result"></p>
+    <script>
+        function printScreen() {
+            var x, y, z, a, s;
+            x = 127;
+            //onluk sistem
+            y = x.toString(16);
+            //16lık sistem
+            z = x.toString(8);
+            //8lik sistem
+            a = x.toString(2);
+            //2lik sistem
+            s = x.toString();
+            //2lik sistem
+
+            document.getElementById('result').innerHTML = "Onluk sistem: " + x + "<br>" +
+                "Hexadecimal sistem: " + y + "<br>" +
+                "Octal sistem: " + z + "<br>" +
+                "Binary sistem: " + a + "<br>" +
+                "String'e çevirme: " + s + " bu değişkenin türü: " + typeof s;
+        }
+    </script>
+</body>
+
+</html>

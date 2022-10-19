@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <p>Click the button to calculate the number of years since midnight, January 1, 1970.</p>
+
+  <button onclick="myFunction()">Try it</button>
+
+  <p id="demo"></p>
+
+  <script>
+    function myFunction() {
+      var seconds = 1000;
+      var minutes = seconds * 60;
+      var hours = minutes * 60;
+      var days = hours * 24;
+      var years = days * 365;
+      var t = Date.now();
+
+
+      var gecmis = 1608057221614;
+      var gecenzaman = Date.now() - 1608057221614;
+      var y = Math.round(gecenzaman / seconds);
+
+      document.getElementById("demo").innerHTML = y;
+    }
+  </script>
+
+</body>
+
+</html>

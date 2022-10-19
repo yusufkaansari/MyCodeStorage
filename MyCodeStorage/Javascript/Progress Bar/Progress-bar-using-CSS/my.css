@@ -1,0 +1,177 @@
+.progress {
+  background: rgba(0, 153, 255, 0.2);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2), 0px 0px 0px 1px rgba(255, 255, 255, 0.2) inset;
+  width: 200px;
+  height: 20px;
+  position: relative;
+  margin-top: 30px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.progress:after {
+  background: #0099FF;
+  height: 18px;
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  content: attr(data-label);
+  color: #000;
+  text-indent: 10px;
+  animation: width 2s;
+  max-width: calc(100% - 2px);
+}
+
+.progress:before {
+  background: #0099FF;
+  height: 24px;
+  position: absolute;
+  left: 0;
+  top: -2px;
+  content: "";
+  width: 2px;
+  animation: left 2s;
+}
+.with-value:before {
+  content: attr(data-value);
+  top: -25px;
+  width: auto;
+  padding: 3px;
+  line-height: 1;
+  height: 15px;
+  left: calc(100% - 10px);
+  color: #FFF;
+  animation: fromTop 1s 2s forwards;
+  opacity: 0;
+}
+
+.striped:after {
+   background-image: repeating-linear-gradient(
+    45deg,
+    #0099FF,
+    #0099FF 10px,
+    rgba(255,255,255, 0.15) 10px,
+    rgba(255,255,255, 0.15) 20px
+  );
+  animation: progress-bar-stripes 1s linear infinite;
+  animation-direction: reverse;
+
+}
+
+@for $i from 1 through 100 {
+  .progress[data-value="#{$i}"]:after {
+    width: percentage($i/100);
+  }
+  .progress[data-value="#{$i}"]:before {
+    left: percentage($i/100);
+  }
+}
+.rounded {
+  border-radius: 15px;
+}
+.rounded:after {
+  border-radius: 15px;
+}
+.rounded:before {
+  display: none;
+}
+@keyframes width {
+  0% {
+    width: 0%;
+  }
+}
+@keyframes left {
+  0% {
+    left: 0%;
+  }
+}
+
+@keyframes fromTop {
+  0% {
+    top: -40px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.base-circle {
+  fill: transparent;
+  stroke: #d2d3d4;
+  stroke-width: 3;
+}
+text {
+  font-size: 11px;
+}
+.selected-value {
+  fill: transparent;
+  stroke: #0099FF;
+  stroke-width:3;
+  animation: stroke 2s linear;
+}
+
+@keyframes progress-bar-stripes {
+  from { background-position: 30px 0; }
+  to { background-position: 0 0; }
+}
+@keyframes stroke{
+  0% {
+    stroke-dasharray:0;
+  }
+}
+
+.progress-circular {
+  width: 100px;
+  border-radius: 50%;
+  position: relative;
+  background: #0099FF;
+  height: 100px;
+  border: 2px solid #000;
+  box-shadow: 0px 0px 0px 10px #FFF inset;
+  margin-top: 20px;
+  animation: rotate 1s linear;
+}
+.progress-circular:before {
+  content: attr(data-value)"%";
+  position:absolute;
+  text-align:center;
+  width: 100%;
+  font-size: 30px;
+  top: calc(50% - 20px);
+  opacity: 0;
+  animation: opacity 1s 1s forwards;
+}
+
+.progress-circular:after {
+      border: 10px solid;
+    border-color: transparent transparent #0099FF transparent;
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: calc(50% - 7px);
+    z-index: 10;
+}
+
+@for $i from 1 through 100 {
+  .progress-circular[data-value="#{$i}"] {
+    transform: rotate(#{$i * 3.6}deg);
+  }
+  .progress-circular[data-value="#{$i}"]:before {
+    transform: rotate(#{-$i * 3.6}deg);
+  }
+}
+
+@keyframes rotate{
+  0% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes opacity {
+  0% {
+      opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

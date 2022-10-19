@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../_assets/bootstrap.min.js"></script>
+    <link href="mdl.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/v4-shims.css">
+  </head>
+  <body>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uyeolModal">
+      Launch demo modal
+    </button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#girisyapModal">
+      Launch demo modal
+    </button>
+    <!-- Modal Uye Ol -->
+    <div class="modal fade md" id="uyeolModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Üye Ol</h5>
+            <button type="button" class="close button-no-outline" data-dismiss="modal" aria-label="Close">
+              <span class="close-icon"aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="modal-body">
+          <form>
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm"><i class="mail-icon icon-size"></i></span>
+              </div>
+              <input type="email" class="form-control form-control-bg" aria-label="Small" aria-describedby="inputGroup-sizing-sm"  placeholder="Mail Adresiniz">
+            </div>
+
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm"><i class="phone-icon icon-size"></i></span>
+              </div>
+              <input type="tel" class="form-control form-control-bg" aria-label="Small" aria-describedby="inputGroup-sizing-sm"  placeholder="Cep Telefonunuz">
+            </div>
+
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm"><i class="password-icon icon-size"></i></span>
+              </div>
+              <input type="password" data-toggle="password" class="form-control form-control-bg-noborder" aria-label="Small" aria-describedby="inputGroup-sizing-sm"  placeholder="Parolanız" >
+              <div class="input-group-endpend">
+                <span class="input-group-text" id="inputGroup-sizing-sm"><button type="button" class="eye-close-icon button-no-outline" id="password-goster"></button></span>
+              </div>
+            </div>
+
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm"><i class="password-icon icon-size"></i></span>
+              </div>
+              <input type="password" data-toggle="password" class="form-control form-control-bg-noborder" aria-label="Small" aria-describedby="inputGroup-sizing-sm"  placeholder="Parolanızı Doğrulayın">
+              <div class="input-group-endpend ">
+                <span class="input-group-text" id="inputGroup-sizing-sm"><button type="button" class="eye-close-icon button-no-outline" id="password-goster"></button></span>
+              </div>
+            </div>
+
+          </form>
+          </div>
+          <div class="modal-footer ">
+
+            <button type="button" class="btn btn-secondary button-uyeol" data-dismiss="modal"><span class="user-icon"></span>&nbsp; Üye Ol</button>
+
+          </div>
+          <div class="container spanveya">
+            veya
+          </div>
+          <div class="modal-footer ">
+            <button type="button" class="btn btn-secondary button-girisyap" data-toggle="modal" data-dismiss="modal" data-target="#girisyapModal"><span class="girisyap-icon"></span>&nbsp; Giriş Yap</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Giris Yap -->
+    <div class="modal fade md" id="girisyapModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Üye Ol</h5>
+            <button type="button" class="close button-no-outline" data-dismiss="modal" aria-label="Close">
+              <span class="close-icon"aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="modal-body">
+          <form>
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm"><i class="mail-icon icon-size"></i></span>
+              </div>
+              <input type="email" class="form-control form-control-bg" aria-label="Small" aria-describedby="inputGroup-sizing-sm"  placeholder="Mail Adresiniz">
+            </div>
+
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm"><i class="password-icon icon-size"></i></span>
+              </div>
+              <input type="password" data-toggle="password" class="form-control form-control-bg-noborder" aria-label="Small" aria-describedby="inputGroup-sizing-sm"  placeholder="Parolanız" >
+              <div class="input-group-endpend">
+                <span class="input-group-text" id="inputGroup-sizing-sm"><button type="button" class="eye-close-icon button-no-outline" id="password-goster"></button></span>
+              </div>
+            </div>
+
+
+
+          </form>
+          </div>
+          <div class="modal-footer ">
+
+            <button type="button" class="btn btn-secondary button-uyeol" data-dismiss="modal"><span class="user-icon"></span>&nbsp; Giriş Yap</button>
+
+          </div>
+          <div class="container spanveya">
+            veya
+          </div>
+          <div class="modal-footer ">
+            <button type="button" class="btn btn-secondary button-girisyap" data-dismiss="modal" data-target="#uyeolModal"><span class="user-icon" ></span>&nbsp; Üye Ol</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

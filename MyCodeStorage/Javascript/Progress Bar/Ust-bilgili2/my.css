@@ -1,0 +1,68 @@
+body {
+	display: flex;
+	box-sizing: border-box;
+	width: 100vw;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(#000, #333);
+	font-family: "Rubik", sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+}
+.loader-group {
+	display: block;
+	width: 50vw;
+}
+.sauce-bottle {
+	display: block;
+	width: 50px;
+	animation: bottle 2s linear forwards;
+}
+.sauce-bottle svg {
+	width: 25px;
+	height: 68.5px;
+	background: transparent;
+	transform: translate(12px, 12px) rotate(45deg);
+}
+.sauce-bottle svg path {
+	fill: rgb(244, 188, 66);
+}
+.sauce-line {
+	display: block;
+	width: auto;
+	height: 3px;
+	background: rgb(244, 188, 66);
+	border-radius: 2px;
+	transform-origin: left;
+	transform: scaleX(0);
+	animation: mustard 2s linear forwards;
+}
+@keyframes mustard {
+	0% {
+		transform: scaleX(0);
+	}
+	100% {
+		transform: scaleX(1);
+	}
+}
+@keyframes bottle {
+	0% {
+		transform: translateX(0vw);
+	}
+	100% {
+		transform: translateX(50vw);
+	}
+}
+.counter {
+	display: block;
+	margin-top: 5px;
+	font-size: 18px;
+	text-align: center;
+	color: rgb(244, 188, 66);
+	width: 100%;
+	height: 20px;
+	vertical-align: middle;
+}

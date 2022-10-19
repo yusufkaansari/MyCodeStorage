@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        <picture>Etiket web geliştiricileri görüntü kaynaklarını belirterek daha fazla esneklik sağlar.
+
+        <picture>Duyarlı tasarımlarda öğenin en yaygın kullanımı sanat yönetmenliği olacaktır. Görüntü alanı genişliğine bağlı olarak yukarı veya aşağı ölçeklenen bir görüntüye sahip olmak yerine, tarayıcı görüntü alanını daha güzel doldurmak için birden çok görüntü tasarlanabilir.
+
+        <picture>Bir veya daha fazla: eleman iki etiketleri içeren <kaynak> etiketlerini ve bir <img> etiketi.
+
+        Tarayıcı, ortam sorgusunun geçerli görüntü alanı genişliğiyle eşleştiği ilk <kaynak> öğesini arayacak ve ardından uygun görüntüyü gösterecektir (srcset özniteliğinde belirtilmiştir). <img> öğesi, <picture>kaynak etiketlerinden hiçbiri eşleşmezse, geri dönüş seçeneği olarak öğenin son alt öğesi olarak gereklidir .
+     -->
+    <picture>
+        <source media="(min-width:650px)" srcset="img_pink_flowers.jpg">
+        <source media="(min-width:465px)" srcset="img_white_flower.jpg">
+        <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+      </picture>
+</body>
+</html>

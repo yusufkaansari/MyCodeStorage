@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    .mytabletr{
+      padding: 2px;
+      margin: 2px;
+    }
+    .mytabletd{
+      padding: 0px;
+      margin: 1px;
+      /*user-select:none;*/
+      line-height: 100%;
+      font-weight: bolder;
+      font-size:20px;
+      color:black;
+      text-align: right;
+    }
+    </style>
+    <script type="text/javascript">
+
+      var fiyat=13000.50;
+      var indmiktari=10.5;
+      var ite=1;
+      function fiyatformat(price){
+        /*var formatprice=new Intl.NumberFormat('tr-TR').format(price);*/
+        var formatprice=new Intl.NumberFormat('tr-TR', {symbolPosition: 'after', style: 'currency', currency: 'TRY' }).format(price);
+        //return formatprice;
+        return price.toLocaleString('tr-TR', {minimumFractionDigits: 2})+" &#8378";
+      }
+      function fiyatazalt() {
+        if(ite==1){
+
+          document.getElementById("li6").innerHTML=fiyatformat(fiyat);
+          document.getElementById("li1").innerHTML=fiyatformat(fiyat);
+        }
+        if(ite==2){
+          document.getElementById("li6").innerHTML=fiyatformat(fiyat);
+          document.getElementById("li5").innerHTML=fiyatformat((fiyat)+(indmiktari));
+        }
+        if(ite==3){
+          document.getElementById("li6").innerHTML=fiyatformat(fiyat);
+          document.getElementById("li5").innerHTML=fiyatformat((fiyat)+(indmiktari));
+          document.getElementById("li4").innerHTML=fiyatformat((fiyat)+(indmiktari*2));
+        }
+        if(ite==4){
+          document.getElementById("li6").innerHTML=fiyatformat(fiyat);
+          document.getElementById("li5").innerHTML=fiyatformat((fiyat)+(indmiktari));
+          document.getElementById("li4").innerHTML=fiyatformat((fiyat)+(indmiktari*2));
+          document.getElementById("li3").innerHTML=fiyatformat((fiyat)+(indmiktari*3));
+        }
+        if(ite==5){
+          document.getElementById("li6").innerHTML=fiyatformat(fiyat);
+          document.getElementById("li5").innerHTML=fiyatformat((fiyat)+(indmiktari));
+          document.getElementById("li4").innerHTML=fiyatformat((fiyat)+(indmiktari*2));
+          document.getElementById("li3").innerHTML=fiyatformat((fiyat)+(indmiktari*3));
+          document.getElementById("li2").innerHTML=fiyatformat((fiyat)+(indmiktari*4));
+        }
+        if(ite>5){
+          document.getElementById("li6").innerHTML=fiyatformat(fiyat);
+          document.getElementById("li5").innerHTML=fiyatformat((fiyat)+(indmiktari));
+          document.getElementById("li4").innerHTML=fiyatformat((fiyat)+(indmiktari*2));
+          document.getElementById("li3").innerHTML=fiyatformat((fiyat)+(indmiktari*3));
+          document.getElementById("li2").innerHTML=fiyatformat((fiyat)+(indmiktari*4));
+        }
+        fiyat=fiyat-indmiktari;ite++;if(ite==6){  ite=10; }
+        setTimeout("fiyatazalt()", 1000);
+      }
+    </script>
+  </head>
+  <body >
+    <button onclick="fiyatazalt()">Fiyat Azalt</button>
+    <!--
+    <ul>
+      <li id="li1"></li>
+      <li id="li2"></li>
+      <li id="li3"></li>
+      <li id="li4"></li>
+      <li id="li5"></li>
+      <li id="li6"></li>
+    </ul> -->
+    <table border="0">
+      <tr class="mytabletr">
+        <td class="mytabletd">Başlangıç Fiyatı </td>
+        <td class="mytabletd"></td>
+        <td class="mytabletd">---------</td>
+        <td id="li1" class="mytabletd" style="font-size:14px;color:#d4d2d4" ><!--&#8378--></td>
+
+      </tr>
+      <tr class="mytabletr">
+        <td class="mytabletd"></td>
+        <td class="mytabletd"></td>
+        <td class="mytabletd"></td>
+        <td id="li2" class="mytabletd" style="font-size:15px;color:#afadaf;"></td>
+      </tr>
+
+      <tr class="mytabletr">
+        <td class="mytabletd"></td>
+        <td class="mytabletd"></td>
+        <td class="mytabletd"></td>
+        <td  id="li3" class="mytabletd" style="font-size:16px;color:#9c9a9c"></td>
+      </tr>
+
+      <tr class="mytabletr">
+        <td class="mytabletd"></td>
+        <td class="mytabletd"></td>
+        <td class="mytabletd"></td>
+        <td  id="li4"class="mytabletd" style="font-size:17px;color:#827f81;"></td>
+      </tr>
+
+      <tr class="mytabletr">
+        <td class="mytabletd"></td>
+        <td class="mytabletd"></td>
+        <td class="mytabletd"></td>
+        <td id="li5" class="mytabletd" style="font-size:18px;color:#595759;"></td>
+      </tr>
+
+      <tr class="mytabletr">
+        <td class="mytabletd">Şuanki Fiyatı</td>
+        <td class="mytabletd"></td>
+        <td class="mytabletd">---------</td>
+        <td id="li6" class="mytabletd"></td>
+      </tr>
+    </table>
+
+  </body>
+</html>

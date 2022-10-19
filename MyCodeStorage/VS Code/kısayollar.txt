@@ -1,0 +1,6 @@
+Yorum Satırı Yapma
+    Ctrl+K Ctrl+C
+    Ctrl+K Ctrl+U
+
+Projeyi Açma Ana Dizinindeyken
+    code .

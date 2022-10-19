@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Grid Sistem</title>
+    <style>
+        div {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- col'ların toplamı 12 olmalı .col-2 .col-10
+        .col- (extra small devices - screen width less than 576px)
+        .col-sm- (small devices - screen width equal to or greater than 576px)
+        .col-md- (medium devices - screen width equal to or greater than 768px)
+        .col-lg- (large devices - screen width equal to or greater than 992px)
+        .col-xl- (xlarge devices - screen width equal to or greater than 1200px)
+    
+    -->
+    <div class="container-fluid">
+        <div class="row" style="background-color: coral;">
+            <!-- eğer sadece col-1 dersek diğer tüm (sm,md,lg,xl) ölçüleri'de 1 e ayarlar. 
+                en küçüğüne ne yazarsak ondan sonraki büyük cihazlara da aynı kodu uygular.
+            -->
+            <div class="col-xl-1">col-xl-1</div>
+            <div class="col-xl-1">col-xl-1</div>
+            <div class="col-xl-1">col-xl-1</div>
+            <div class="col-xl-1">col-xl-1</div>
+            <div class="col-xl-1">col-xl-1</div>
+            <div class="col-xl-1">col-xl-1</div>
+            <div class="col-xl-1">col-xl-1</div>
+            <div class="col-xl-1">col-xl-1</div>
+            <div class="col-xl-1">col-xl-1</div>
+            <div class="col-xl-1">col-xl-1</div>
+            <div class="col-xl-1">col-xl-1</div>
+            <div class="col-xl-1">col-xl-1</div>
+        </div>
+        <div class="row" style="background-color: darkcyan;">
+            <div class="col-xl-2">col-xl-2</div>
+            <div class="col-xl-2">col-xl-2</div>
+            <div class="col-xl-2">col-xl-2</div>
+            <div class="col-xl-2">col-xl-2</div>
+            <div class="col-xl-2">col-xl-2</div>
+            <div class="col-xl-2">col-xl-2</div>
+        </div>
+        <div class="row" style="background-color: rgb(112, 226, 226);">
+            <div class="col-xl-4">col-xl-4</div>
+            <div class="col-xl-4">col-xl-4</div>
+            <div class="col-xl-4">col-xl-4</div>
+        </div>
+    </div>
+</body>
+
+</html>

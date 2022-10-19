@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p>This example uses the addEventListener() method to attach a click event to a button.</p>
+
+    <button id="myBtn">Try it</button>
+
+    <p><strong>Note:</strong> The addEventListener() method is not supported in Internet Explorer 8 and earlier
+        versions.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("myBtn").addEventListener("click", function () {
+            document.getElementById("demo").innerHTML = "Hello World";
+        });
+
+        // Diğer kullanım şekli ///////////////////////////
+        // document.getElementById("myBtn").addEventListener("click", myFunction);
+
+        // function myFunction() {
+        //     document.getElementById("demo").innerHTML = "Hello World";
+        // }
+
+        // Birden Çok Listener /////////////////////////////
+        // var x = document.getElementById("myBtn");
+        // x.addEventListener("mouseover", myFunction);
+        // x.addEventListener("click", mySecondFunction);
+        // x.addEventListener("mouseout", myThirdFunction);
+
+        // function myFunction() {
+        //     document.getElementById("demo").innerHTML += "Moused over!<br>"
+        // }
+
+        // function mySecondFunction() {
+        //     document.getElementById("demo").innerHTML += "Clicked!<br>"
+        // }
+
+        // function myThirdFunction() {
+        //     document.getElementById("demo").innerHTML += "Moused out!<br>"
+        // }
+    </script>
+
+</body>
+
+</html>

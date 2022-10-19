@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <!-- slice(start,end)
+    - slice:dilimlemek
+    - slice(), bir stringden bir bölüm çıkarır ve ayıklanan bölümü ile yeni bir string döndürür.
+    - bir paremetre negatifse, konum stringi sonunda sayılır. var yazi="abcd "; yazi.slice(-4,-1) bu kodun anlamı sondan başlayarak(-1) 4 harfini dilimler.
+
+    - ikinci parametreyi atlarsanız, metot stringi geri kalanını dilimleyecektir.
+    - negatif konumlar, Internet Explorer 8 ve önceki sürümlerinde çalışmaz. -->
+
+    <h2>JavaScript String Methods</h2>
+
+    <p>The slice() method extract a part of a string
+        and returns the extracted parts in a new string:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        var str = "Apple, Banana, Kiwi";
+        var res = str.slice(7, 13);
+        document.getElementById("demo").innerHTML = res;
+    </script>
+
+</body>
+
+</html>

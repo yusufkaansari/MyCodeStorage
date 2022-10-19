@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <!-- Form submit edilince aktif olur.
+      onsubmit="return false" olursa submit edilmeyecek
+      -->
+
+  <form onsubmit="return dogrula();" name="form1" action="gonder.php" method="POST">
+    <input type="text" name="İsim" />
+    <button type="submit">Gönder</button>
+  </form>
+
+  <script>
+    function dogrula() {
+      var form = document.forms["form1"];
+      var deger = form["isim"].value;
+
+      if (deger == "") {
+        alert("isim alanı boş bırakılamaz...");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+
+</html>

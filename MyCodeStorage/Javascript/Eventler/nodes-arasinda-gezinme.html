@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Düğümler Arası Gezinme</title>
+</head>
+
+<body>
+    <div id="DivParent">
+        <h1 id="baslik">Başlık Deneme</h1>
+        <p id="result">Paragraf Deneme</p>
+        <p>paragraf 1</p>
+        <p>paragraf 2</p>
+        <p id="p3">paragraf 3</p>
+        <p>paragraf 4</p>
+        <p>paragraf 5</p>
+        <p>paragraf 6</p>
+        <p>pparagraf 7</p>
+        <p>paragraf 8</p>
+        <p>paragraf 9</p>
+    </div>
+    <script>
+        var x = document.querySelector("#DivParent").firstChild.nodeValue;
+        // h1'in kendisine ait bir text değeri yoktur. Child'ine ait bir text değeri vardır
+        // h1 etiketinin içindeki değer div etiketinin torunudur.
+
+        var y = document.querySelector("#DivParent").nodeName;
+        // nodeName ile etiket ismi döndürecek
+
+        var y1 = document.querySelector("#DivParent").children.length;
+        // tüm çocuklarının sayısı
+
+        var z = document.querySelector("#DivParent").getAttributeNode('id').nodeName;
+        // attributelerinde nodename'ini alabiliriz
+
+        var z1 = document.querySelector("#DivParent").firstChild.nextSibling.firstChild.nodeValue;
+
+        var z2 = document.querySelector("#DivParent").children[0].firstChild.nodeValue;
+        // DivParent id'li div'in içindeki h1 etiketinin değerine ulaşmak için
+
+        //div etiketinin içindeki etiketlerin içeriklerin erişmek için:
+        var elementNodes = document.querySelector('#DivParent').children;
+        var i, result = "";
+        for (i = 0; i < elementNodes.length; i++) {
+            result += elementNodes[i].firstChild.nodeValue + "\n";
+        }
+
+        //textContent ile içerik alma
+        var elementNodes2 = document.querySelector('#DivParent').children;
+        console.log(elementNodes[0].textContent);
+
+
+        console.log(result);
+
+        /*
+            .firstChild 'ın eşiti childNodes[0] 'dır.
+
+                firstChild          ilk alt düğümü döndürür
+                childNodes          tüm alt düğümlerin bir koleksiyonunu döndürür
+                firstElementChild   ilk alt öğeyi döndürür
+                children            tüm alt öğelerin bir koleksiyonunu döndürür
+        */
+
+
+        /*
+            `firstChild` ve `firstElementChild` arasındaki fark nedir?
+
+            Bu özellik ile firstChild arasındaki fark, firstChild'in ilk alt düğümü bir öğe düğümü, bir metin düğümü veya bir açıklama düğümü olarak (hangisinin ilkine bağlı olarak) döndürmesidir; firstElementChild ise bir öğe düğümü olarak ilk çocuk düğümü döndürür (metni ve yorum düğümleri).
+        
+        */
+
+    </script>
+</body>
+
+</html>

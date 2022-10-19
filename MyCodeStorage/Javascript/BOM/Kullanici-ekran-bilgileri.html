@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <script>
+        var result;
+        result = document.getElementById('result');
+        result.innerHTML =
+            "Ekran genişliği: " + screen.width + "<br>" +
+            "Ekran yüksekliği: " + screen.height + "<br>" +
+            "Ekranın mevcut genişliği: " + screen.availWidth + "<br>" +
+            "Ekranın mevcut yüksekliği: " + screen.availHeight + "<br>" +
+            "Renk Derinliği: " + screen.colorDepth + "<br>" +
+            "Pixel Derinliği: " + screen.pixelDepth + "<br>";
+    </script>
+</body>
+
+</html>

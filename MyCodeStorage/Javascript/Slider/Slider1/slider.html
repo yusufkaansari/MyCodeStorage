@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <link href="my.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="js.js"></script>
+</head>
+
+<body>
+  <!-- Slide için container -->
+  <div class="slideshow-container">
+    <!-- full-width resim numara ve başlık kısmı -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="images/img_nature_wide1.jpg" style="width: 100%;">
+      <div class="text">Başlık Bir</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="images/img_snow_wide2.jpg" style="width: 100%;">
+      <div class="text">Başlık İki</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="images/img_lights_wide3.jpg" style="width: 100%;">
+      <div class="text">Başlık Üç</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <img src="images/img_mountains_wide4.jpg" style="width: 100%;">
+      <div class="text">Başlık Dört</div>
+    </div>
+
+    <!-- İleri ve geri butonları -->
+    <a class="prev" onlick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onlick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  <!-- Alt nokta kısımları-->
+  <div style="text-align:center;">
+    <!-- buraya dokta yerine küçük resim gelebilir mi?? -->
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+
+</body>
+
+</html>

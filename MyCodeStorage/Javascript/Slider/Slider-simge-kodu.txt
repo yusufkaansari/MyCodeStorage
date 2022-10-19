@@ -1,0 +1,18 @@
+Unicode Decimal Code
+❮
+Symbol Name:	Heavy Left-Pointing Angle Quotation Mark Ornament
+Html Entity:
+Hex Code:	&#x276e;
+Decimal Code:	&#10094;   <--- bunu al html'e yapıştır
+Unicode Group:	Dingbats
+
+Unicode Decimal Code &#10095;
+❯
+Symbol Name:	Heavy Right-Pointing Angle Quotation Mark Ornament
+Html Entity:
+Hex Code:	&#x276f;
+Decimal Code:	&#10095;  <--- bunu al html'e yapıştır
+Unicode Group:	Dingbats
+
+
+----------> daha fazlası için: https://www.codetable.net/altkeycodes

@@ -1,0 +1,44 @@
+Erişilebilirlikte aria-label ve role kullanımı
+
+Erişilebilirlik, kullanıcı deneyiminin en önemli alanlarından bir tanesi. Bir arayüzün erişilebilirliğinin sağlanmasında, development sürecinde en önemli iş HTML’nin üzerine düşüyor. Çoğunlukla kullanılan ekran okuyucular için CSS veya JS’nin (bazı durumlar hariç) ne yaptığının çok bir önemi yok. Daha önce Erişilebilirlik için hızlı çözümler ve Erişim yoksa trafik de yok! yazılarımızda erişilebilirlikle ilgili çözümlerden bahsetmiştik. Bu yazımızda, HTML tarafında erişilebilirlikle ilgili daha güvenilir ve daha sağlam bir çözüm olan aria-label ve role kullanımından bahsedeceğim. Arayüz geliştirme süreci, tasarlanan deneyimin, doğru ve planlandığı şekilde kullanıcıya aktarıldığı esas noktadır. Bu yüzden tasarlanan bütün sürecin sonunda etrafınızda tırnaklarını yiyerek sizi izleyen bir kitleyle karşılaşmanız muhtemel. Bu kitleyi görsel olarak tatmin edecek düzeyde bir çalışma ortaya koysanız da arka planda, özellikle de erişilebilirlik konusunda sorunlar oluşabilir. Eğer ki geliştirme sürecinizde, erişilebilirlikle ilgili standartlara uygunluğu önemsemeden çalışıyorsanız, bu durum tasarımı da etkilemediğinden erişilebilirlik açısından ortaya çıkan kötü sonuçlar gözden kaçabilir. Tabii bunu kimse anlamaz. Eğer böyle bir şeye dikkat etmiyorsanız siz de anlamazsınız.
+Bir geliştirici olarak bu konuda savunduğum şey her zaman, erişilebilirliğin sağlanmasında en önemli görevin geliştiricilerin üzerine düştüğüdür. Çünkü, bunun için ekstra bir tasarım gücü harcanmamış olsa bile, çok küçük hareketlerle insanların hayatını etkileyebilirsiniz. Bunun, kullanıcı için ne kadar değerli olduğunu da tahmin edebilirsiniz.
+Erişilebilir bir arayüz yaratabilmek için en çok söylenen şey, her yerde yazı kullanmaktır. Bu birçok problemi çözer. Peki erişilebilirliğin merkezinde neden yazı vardır? Çünkü yazılar çok yönlü kullanılabilir, yorumlanabilir ve dönüştürülebilirler. Başka dillere çevrilebilirler, yazılımlar tarafından anlaşılabilirler ve tabii ki insanlar tarafından da kolaylıkla anlaşılabilirler.
+HTML içerisindeki elementler temelde iki değer alırlar: Biri Rolü, diğeriyse, Adı’dır. HTML5 ile yaygınlaşan semantik elementler (header, footer, article, sidebar, section, button, nav vs.) rollerle ilgili sıkıntıları çoğunlukla çözer. Yine de role=”” tanımlamarıyla genel elementlere (span, div, ul, li) de belirlenmiş rolleri tanımlayabilirsiniz. Ad kısmı ise en büyük sıkıntıdır ve çoğunlukla atlanır. Genel olarak bilinen tanımlamalar alt=”” kullanımı veya title=”” kullanımıdır. Ama bunlar bazen yeterli olmayabilir ve title etiketi günvenilir bir kullanım olarak görülmez.
+Burada HTML5 ile hayatımıza giren ve çok daha güçlü tanımlayıcı ve yönlendirici olan 3 tane kullanımdan kısaca bahsetmeye çalışacağım.
+aria-label kullanmı
+aria-labelledby kullanımı
+role kullanımı
+aria-label kullanımı
+aria-label, geçerli elementi string olarak tanımlamak için kullanılır. Ekranda görünür olmayan metin etiketlerinin tanımlanmasında kullanılır. Bu attribute her türlü HTML elemntinde kullanılabilir. Herhangi bir limiti yoktur. Sadece role=”” tanımlaması yapılmış elemanlar için değildir. Örnek vermek gerekirse, aşağıdaki gibi bir buton, ekran okuyucular için hiçbir şey ifade etmez. Buradan alınabilecek aksiyonla ilgili herhangi bir bilgi vermez.
+<button class="order"></button> 
+<style> 
+.order{ background-image:url("../images/order-icon.png"); } </style>
+Ancak aria-label ile kullanımlarında, bu button ile alınacak aksiyon bilgisi kullanıcıya verilmiş olur.
+<button class="order" aria-label="Sipariş bilgilerini aç"></button> <style> 
+.order{background-image:url("../images/order-icon.png");} 
+</style>
+Eğer görünür yazı etiketleri varsa bunlar için aria-labeledby kullanılır. Firefox, Chrome ve Internet Explorer gibi büyük tarayıcıların hepsinde ve ekran okuyucuların tamamında aria attribute’leri desteklenmektedir.
+aria- labelledby kullanımı
+aria-labelledby da aria-label gibi geçerli elementi tanımlamak için kullanılır. Aria-label’dan farklı olarak ekranda görünür olan metinlerin tanımlanmasında da kullanılır. Ekranda görünür olan metinlerde aria-label kullanılmaz.
+<button class="order" aria-labelledby="Sipariş bilgilerini aç">Siparişleriniz</button> 
+<button class="order" aria-label="Sipariş bilgilerini aç"></button>
+aria-labelledby bileşenlerin, grupların veya onların label’ları arasındaki ilişkiyi kurmak için de kullanılır. Ekran okuyucular tipik olarak ekranda tab ile ilerlerler. Eğer bir label herhangi bir input alanıyla ilişkilendirilmemişse, ekran okuyuclar bunu algılayamazlar. Aria-labelledby sadece form elementlerini değil diğer statik yazı alanlarını, başlıkları ve diğerlerini de kapsar.
+<div role="menubar"> 
+<div role="menuitem" id="fileMenu">File</div> 
+  <div role="menu" aria-labelledby="fileMenu"> 
+    <div role="menuitem">Open</div> 
+    <div role="menuitem">Save</div> 
+    <div role="menuitem">Save as...</div> 
+  </div> 
+</div>
+Aria-labelledby ile ilgili detaylı örnekleri MDN(Mozilla Developer Network) inceleyebilirsiniz.
+role kullanımı
+Role, geçerli elementin o sırada görevli olduğu ve yapmakta oldu işi tanımlayan statik tanımlardır.
+<div class="checkitem" role="checkbox" aria-checked="true"></div>
+Ekran okuyucular için yukarıdaki durumda, bunun bir checkbox olduğunu ve bunun da işaretli olduğunu ifade eder.
+<div class="checkbox checked"></div> 
+<div class="checkbox unchecked"></div>
+Yukarıdaki gibi bir kullanım ekran okuyucular için herhangi bir anlam ifade etmez. Bu alanlar boş olarak değerlendirilir. Role’lerdeki bu görev tanımlamaları 4 kategoriye ayrılır. Bunlar:
+Landmark: Geniş içerik alanları ve navigasyon için ekran okuyucular tarafından kullanılır. (Örn. <footer role=”contentinfo”>…</footer>) Document: HTML içeirisinde div, span gibi genel elementler için yapısal roller eklenmesini sağlar. (Örn. <div role = “form”>…</div>) Widget: Bu roller bağımsız kullanıcı ara birimi araçları veya daha büyük parçalar olarak hareket eden kalıpları tarif eder.(Örn. <div role=”tooltip”>…</div>, <div role=”alert”>…</div>) Abstract: Abstract roller sadece tarayıcılar tarafından ve dökümanı düzenlemek için kullanılırlar. Ekran okuyucular tarafından kullanılmazlar ve ekstra erişilebilirlik özellikleri sağlamazlar. Role tanımlamayla ilgili, daha anlaşılır olması için şu linkteki örneği inceleyebilirsiniz.
+Sonuç
+Erişilebilirlikle ilgili standartlar, özellikle HTML5’ten sonra çok daha hızlı gelişti. Özellikle W3C standartlarında bu konuda çalışmalar hala devam ediyor. Özellikle aria attribute’lerinin kullanım alanları çok geniş. Burada belli başlı birkaç tanesinden bahsetmeye çalıştım. Sadece bunları kullanarak bile arayüzünüzün erişilebilirliğini önemli ölçüde geliştirebilirsiniz. Sarfettiğiniz efordan çok daha fazla kazanımlar elde edebilir, hazırladığınız arayüzlerde bu gibi basit düzenlemelerle, sadece görünen yüzüyle değil her yönüyle tüm kullanıcıları kapsayan bir deneyim hedefleyebilirsiniz. Daha detaylı bilgi için başvurabileceğiniz bazı kaynaklar: Google Web Accessibility MDN(Mozilla Developer Network) Accessibility W3C Aria ve role standartları

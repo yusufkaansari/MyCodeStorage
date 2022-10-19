@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p>Click the button to display the array values after the split.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            var str = "How are you doing today?";
+            var res = str.split(" ");
+            //document.getElementById("demo").innerHTML = res[0];
+            for (var i = 0; i < res.length; i++) {
+                document.getElementById("demo").innerHTML += res[i] + "<br>";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+tabloların içine yazılan <caption> etiketi, ekran okuyucular için tablonun içeriği hakkında bilgi vermek için kullanılıyor.

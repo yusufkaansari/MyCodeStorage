@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <p>Click the button to extract characters from the string.</p>
+
+  <button onclick="myFunction()">Try it</button>
+
+  <p id="demo"></p>
+
+  <script>
+    function myFunction() {
+      var str = "Hello world!";
+      var res = str.substring(2, 4); // 2 ile 4 arasında kalanları karakteri alır.
+      // negatif değer almaz fakat slice methodu alır.
+
+
+      var str2 = "Hello world!";
+      var res2 = str2.substr(2, 4); // 1 no karakterden itibare 4. karaktere kadar alır.
+      document.getElementById("demo").innerHTML = res + "<br>" + str + "<br>" + res2 + "<br>" + str2 + "<br>";
+    }
+  </script>
+
+</body>
+
+</html>
+
+<!--
+Click the button to extract characters from the string.
+
+Try it
+ll
+Hello world!
+llo
+Hello world!
+
+-->

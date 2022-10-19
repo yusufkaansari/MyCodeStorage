@@ -1,0 +1,1 @@
+bu satırda şunu yaptım

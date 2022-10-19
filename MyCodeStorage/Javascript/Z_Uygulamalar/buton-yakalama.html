@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Buto Yakalama Oyunu</title>
+    <style>
+        #obj {
+            /* width: 400px;
+            height: 400px; */
+            position: absolute;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid mt-3">
+        <button class="btn btn-primary" type="button" id="obj">Tıkla</button>
+    </div>
+
+    <script>
+        var counter = 0, obj, xpos, ypos;
+        var obje = document.querySelector('#obj');
+
+        obje.onmouseover = function () {
+            counter++;
+            xpos = parseInt(Math.random() * 1000);
+            ypos = parseInt(Math.random() * 800);
+            obje.style.left = xpos + "px";
+            obje.style.top = ypos + "px";
+
+        }
+        obje.onclick = function () {
+            alert(counter + ". seferde yakaladın");
+            counter = 0;
+        }
+    </script>
+</body>
+
+</html>

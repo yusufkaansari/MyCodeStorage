@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p>Click the button to join two arrays.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            var hege = ["Cecilie", "Lone"];
+            var stale = ["Emil", "Tobias", "Linus"];
+            var children = hege.concat(stale);
+            document.getElementById("demo").innerHTML = children;
+        }
+    </script>
+
+</body>
+
+</html>

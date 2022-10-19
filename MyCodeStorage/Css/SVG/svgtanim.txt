@@ -1,0 +1,8 @@
+SVG nedir? Scalable Vector Graphics
+
+Ölçeklenebilir vektör grafikleri. Web sayfamızın içerisinde SVG dosyasını 
+hangi boyutta kullanırsak kullanalım herhangi bir bozulmaya rastlamıyoruz.
+Özellikle ölçeklenebilirlik, etkileşim, programlanabilirlik, performans ve 
+erişebilirlik taleplerine cevap veren en iyi formatlardan biri. SVG, 
+XML tabanlı bir vektör grafik formatı; Web’de ve diğer ortamlarda 
+çeşitli grafikleri görüntülemek için kullanılır. 

@@ -1,0 +1,14 @@
+.mytabletr{
+  padding: 2px;
+  margin: 2px;
+  background-color: #0001;
+}
+.mytabletd{
+  padding: 0px;
+  margin: 1px;
+  background-color: #0c21;
+  user-select:none;
+  line-height: 100%;
+  font-weight: bolder;
+  font-size:12px;
+}

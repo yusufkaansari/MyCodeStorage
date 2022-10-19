@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Düğümler Arası Gezinme</title>
+</head>
+
+<body style="text-align: center;">
+    <button type="button" onclick="elementOlusturma();">Ekle</button>
+    <button type="button" onclick="elementKaldir();">Kaldır</button>
+    <button type="button" onclick="elementDegistir();">Degistir</button>
+    <div id="DivParent">
+        <h1 id="baslik">Başlık Deneme</h1>
+
+        <p id="result">Paragraf Deneme</p>
+        <p>paragraf 1</p>
+        <p id="p2">paragraf 2</p>
+        <p id="p3">paragraf 3</p>
+        <p id="p4">paragraf 4</p>
+        <p>paragraf 5</p>
+        <p>paragraf 6</p>
+        <p>pparagraf 7</p>
+        <p>paragraf 8</p>
+        <p>paragraf 9</p>
+    </div>
+    <script>
+        var parentDiv = document.querySelector('#DivParent');
+        var p2 = document.querySelector('#p2');
+        var p3 = document.querySelector('#p3');
+
+        function elementOlusturma() {
+            var p = document.createElement("p");
+
+            var text = document.createTextNode("Burası bir paragraftır.");
+
+            p.appendChild(text);
+
+            // en son eleman olarak eklemek için
+            //parentDiv.appendChild(p);
+
+            // istenilen elemandan önce eklemek için; id="p3" olan elemandan önce eklemek için
+            parentDiv.insertBefore(p, p3);
+        }
+
+        function elementKaldir() {
+            //Bu şekilde parant düğümüne ulaşılan node'lar silinebilir
+            parentDiv.removeChild(parentDiv.lastElementChild);
+
+            parentDiv.removeChild(parentDiv.childNodes[0]);
+
+            parentDiv.removeChild(parentDiv.childNodes[parentDiv.children.length]);
+
+            parentDiv.removeChild(p3);
+
+            parentDiv.removeChild(document.querySelector('#p4'));
+
+            //bir node'un içeriğini silme://////////
+            p3.removeChild(p3.firstChild);
+
+            //bir node'un kendisini silme
+            p3.parentNode.removeChild(p3);
+        }
+
+        function elementDegistir() {
+            var p = document.createElement("p");
+            var text = document.createTextNode("Paragraf Değiştirilidi");
+            p.appendChild(text);
+
+            //değiştirme işlemi
+            parentDiv.replaceChild(p, p2);
+        }
+    </script>
+</body>
+
+</html>

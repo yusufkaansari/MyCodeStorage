@@ -1,0 +1,57 @@
+body {
+  background-color: #f1f8fa;
+  font-family: 'Poppins', sans-serif;
+  color: #65766d;
+}
+.box {
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 400px;
+  margin: 48px auto;
+  box-shadow: 0 2px 40px rgba(0,0,0,0.05);
+}
+
+.textSection {
+  padding: 18px 24px;
+  text-align: center;
+}
+
+.progress {
+  margin-bottom: 8px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: #f1f8fa;
+}
+.tooltipSection {
+  position: relative;
+  margin-top: 64px;
+}
+.progress .determinate {
+  background-color: #3cb878;
+}
+._tooltip {
+  display: inline-block;
+  position: absolute;
+  left: calc(80% - 24px);
+  background-color: #3cb878;
+  color: #fff;
+  top: -42px;
+  line-height: 26px;
+  font-size: 12px;
+  text-align: center;
+  width: 48px;
+  border-radius: 4px;
+}
+._tooltip:after {
+    content:'';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -6px;
+    width: 0;
+    height: 0;
+    border-top: solid 6px #3cb878;
+    border-left: solid 6px transparent;
+    border-right: solid 6px transparent;
+}

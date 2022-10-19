@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        div {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1>Görünme/Gizleme Izgara Sistemi</h1>
+        <div class="row">
+            <div class="col-9 bg-success">
+                Bu sütun makaleler için
+            </div>
+            
+            <div class="col-3 bg-warning d-none">
+                <!-- d-none tüm ekranlar için sütunu gizler -->
+
+                sidebar için
+            </div>
+
+
+            <div class="col-3 bg-warning d-none d-sm-block">
+                <!-- önce d-none yazılır daha sonra d-sm-block small'den itibaren görünür yap. -->
+            
+                sidebar için
+            </div>
+
+            <div class="col-3 bg-warning d-sm-none d-md-block">
+                <!-- Sadece sm ekranlar için gizleme işlemi
+                    d-sm-none: sm itibaren ve daha büyük ekranlar için gizle
+                    d-md-block: md ekranlardan itibaren ve daha büyük ekranlar için görünür yap
+                 -->
+
+                sidebar için
+            </div>
+
+            <div class="col-3 bg-warning d-none d-sm-block d-md-none">
+                <!-- Sadece sm ekranlar için görünmesi işlemi
+                    d-none:tüm ekranlar için gizle
+                    d-sm-block: sm ekranlardan itibaren ve daha büyük ekranlar için görünür yap
+                    d-md-none: md ekranlardan itibaren ve daha büyük ekranlar için gizle
+                 -->
+
+                sidebar için
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

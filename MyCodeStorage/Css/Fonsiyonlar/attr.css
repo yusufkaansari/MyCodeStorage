@@ -1,0 +1,6 @@
+/* Seçili öğenin bir özniteliğinin değerini verir
+attr(attribute-name) */
+
+a::after {
+    content: " ("attr(href) ")";
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="para1"> Paragraf 1</p>
+    <button onmouseover="faregeldi()" onmouseout="faregitti()"> Tıkla</button>
+
+    <script>
+    	//onmouseover: fare üzerine gelince etkinleş
+    	//onmouseout: fare üzerinden gidince etkinleş
+
+    	function faregeldi(){
+    		var element=document.getElementById("para1");
+    		element.innerHTML = "Mouse Over Effect";
+    	}
+    </script>
+
+  </body>
+</html>

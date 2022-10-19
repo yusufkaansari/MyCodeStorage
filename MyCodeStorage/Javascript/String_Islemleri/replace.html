@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p>Click the button to replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+    <p id="demo">Visit Microsoft!</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+        function myFunction() {
+            var str = document.getElementById("demo").innerHTML;
+            var res = str.replace("Microsoft", "W3Schools");
+
+            // büyük harf küçük harf duyarlılığını kaldırmak için şu ifade kullanılır.
+            var res2 = str.replace(/microsoft/i, "W3Schools");
+
+            // eğer tüm ifadeyi değiştirmek istersek
+            var res3 = str.replace(/microsoft/g, "W3Schools");
+
+            // üstteki 2 ifadeyi birleştirmek istersek:
+            var res4 = str.replace(/microsoft/gi, "W3Schools");
+            document.getElementById("demo").innerHTML = res2;
+        }
+
+
+    </script>
+
+</body>
+
+</html>

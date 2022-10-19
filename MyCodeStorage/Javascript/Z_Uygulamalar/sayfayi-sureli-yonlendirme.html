@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayfayı Süreli Yönlendirme</title>
+</head>
+
+<body>
+    <p id="result"></p>
+
+    <script>
+        go("#result", "https://www.google.com", 5);
+        function go(ID, address, second) {
+            if (second == 0) {
+                window.location.href = address;
+            }
+            document.querySelector(ID).textContent = second + " saniye sonra yönlendirileceksiniz";
+            second--;
+
+            setTimeout(function () {
+                go(ID, address, second);
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Karakter Sınırlama Uygulaması</title>
+</head>
+
+<body>
+    <div class="container-fluid mt-3">
+        <form>
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="mesaj">Yorum Giriniz</label>
+                    <textarea id="mesaj" class="form-control" name="mesaj" rows="3"></textarea>
+                    <p id="result" class="badge badge-dark p-2 mt-3"></p>
+                </div>
+
+            </div>
+        </form>
+    </div>
+    <script>
+        var mesaj, result, character = 150, characterLength;
+
+        mesaj = document.querySelector("#mesaj");
+        result = document.querySelector("#result");
+        /*
+        mesaj.onkeydown = characterControl();
+        mesaj.onkeyup = characterControl();
+        */
+        mesaj.addEventListener("keydown", characterControl);
+        mesaj.addEventListener("keyup", characterControl);
+
+        function characterControl() {
+            characterLength = mesaj.value.length;
+
+            if (character >= characterLength) {
+                var lastLength = character - characterLength;
+                result.textContent = lastLength + " karakter kaldı";
+            } else {
+                mesaj.value = mesaj.value.substr(0, character);
+            }
+        }
+    </script>
+</body>
+
+</html>

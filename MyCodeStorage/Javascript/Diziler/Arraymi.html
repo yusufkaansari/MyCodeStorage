@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        typeof fruits;    // returns object
+
+        //Çözüm 1
+        Array.isArray(fruits);   // returns true
+
+        //Çözüm 2
+        function isArray(x) {
+            return x.constructor.toString().indexOf("Array") > -1;
+        }
+
+        //Çözüm 3
+        fruits instanceof Array;   // returns true
+    </script>
+</body>
+
+</html>

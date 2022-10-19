@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Event Listener</title>
+</head>
+
+<body style="height: 300px;" id="body">
+    <!-- Çıktısı: İşlem 5 kez gerçekleştikten sonra sonlanacaktır. Body alan kırmızı renk ile kalacaktır -->
+    <script>
+        var say = 0;
+        var sayac = 0;
+        document.body.addEventListener("click", tikla);
+
+        function tikla() {
+            if (sayac < 5) {
+                if (say == 0) {
+                    document.body.style.background = "red";
+                    say++;
+                    sayac++;
+                } else {
+                    document.body.style.background = "blue";
+                    say--;
+                    sayac++;
+                }
+            } else {
+                document.body.removeEventListener("click", tikla);
+            }
+        }
+    </script>
+</body>
+
+</html>

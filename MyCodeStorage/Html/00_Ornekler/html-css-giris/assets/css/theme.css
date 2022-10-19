@@ -1,0 +1,46 @@
+html{
+  width: 100%;
+  height: 100%;
+}
+body{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.a{
+
+  padding: 5px 5px 5px 5px;
+  margin: 20px;
+  border: 2px solid blue;
+  border-radius: 20px;
+}
+.b{
+  padding: 10px 10px;
+  border: 2px solid red;
+  border-radius: 20px;
+}
+button.button{
+  border-top: black;
+  border-width: 1px;
+  border-style: solid;
+  /* Yukarıdaki tanımlama yerine kısaca bu şekilde olabilir */
+  border: 1px solid black;
+  /* butonu yuvarlak yapmak için. radius yuvarlamak demek*/
+  border-radius: 5px;
+
+  /* öğenin içinde sağdan ve soldan 10px, aşağı ve yukarıya 20px boşluk verilmesi */
+  padding: 10px 20px;
+
+  /* margin demek çevresindeki öğeler ile arasına mesafe koymak
+    margin:mesafe demek
+    diğer tanım: bir web sayfasındaki nesnelerin etrafındaki boşluk olarak ifade
+    edilebilir.
+  */
+  margin: 10px;
+}
+  /* sayfanın css kodlarını düzenlerken id kullanmak gerekiyor*/
+#orange1 button{
+  background: orange;
+}

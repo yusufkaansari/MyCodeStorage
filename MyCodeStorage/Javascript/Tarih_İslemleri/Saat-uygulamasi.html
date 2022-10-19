@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Saat Uygulaması</title>
+  <!--<link href="saat.css" type="text/css" rel="stylesheet" /> -->
+  <style type="text/css">
+  body{
+    font-size: 72px;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color:#333;
+  }
+  </style>
+  <script type="text/javascript">
+
+
+    function say() {
+
+      var zaman = new Date();
+
+      var sat = zaman.getHours();
+      var dk  = zaman.getMinutes();
+      var sn  = zaman.getSeconds();
+      var simdi=sat+":"+((dk<10)?"0":"")+dk+":"+((sn<10)?"0":"")+sn;
+      saat.innerHTML=simdi;
+      setTimeout("say()", 1000);
+    }
+  </script>
+</head>
+
+<body onload="say()">
+  <span id="saat"></span>
+</body>
+
+</html>

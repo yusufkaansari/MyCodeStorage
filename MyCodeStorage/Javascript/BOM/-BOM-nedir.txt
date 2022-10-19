@@ -1,0 +1,4 @@
+Browser Object Model
+
+window.document.getElementById
+window tüm document nesnelerinin bir alt öğesidir

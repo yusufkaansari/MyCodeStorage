@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Zaman Komutları</title>
+    <script type="text/javascript">
+      var x=0;
+      var sayac;
+      function say(){
+        document.form1.T1.value=x;
+        x++;
+        sayac=setTimeout("say()",1000);
+        if(x==15){
+          alert("15 saniye doldu......");
+          clearTimeout(sayac);
+          }
+      }
+      function dur()
+      {
+        clearTimeout(sayac);
+      }
+    </script>
+  </head>
+  <body>
+    <p><b>Sayaç</b></p>
+    <input type="button" name="" value="Başlat" onclick="say()">
+    <input type="button" name="" value="Dur" onclick="dur()"><br>
+    <form name="form1">
+      <input  name="T1">
+    </form>
+  </body>
+</html>

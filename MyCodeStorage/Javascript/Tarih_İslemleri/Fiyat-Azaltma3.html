@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+
+      var fiyat=1000;
+      function fiyatazalt() {
+        var indmiktari=10;
+        document.getElementById("li6").innerHTML=fiyat;
+        /*
+        document.getElementById("li5").innerHTML=(fiyat)+(indmiktari);
+        document.getElementById("li4").innerHTML=(fiyat)+(indmiktari*2);
+        document.getElementById("li3").innerHTML=(fiyat)+(indmiktari*3);
+        document.getElementById("li2").innerHTML=(fiyat)+(indmiktari*4);*/
+
+
+        var eli5=document.getElementById("li5");
+        console.log(eli5.innerText*2);
+        console.log(eli5);
+
+        if(document.getElementById("li2").innerText==""){
+        if ( document.getElementById("li5").innerText>document.getElementById("li1").innerText ) {
+          document.getElementById("li5").innerHTML=document.getElementById("li1").innerText;
+        } else {
+          document.getElementById("li5").innerHTML=(fiyat)+(indmiktari);
+        }
+        if (document.getElementById("li4").innerText>document.getElementById("li1").innerText ) {
+          document.getElementById("li4").innerHTML=document.getElementById("li1").innerText;
+        }else{
+          document.getElementById("li4").innerHTML=(fiyat)+(indmiktari*2);
+        }
+        if ( document.getElementById("li3").innerText>document.getElementById("li1").innerText) {
+          document.getElementById("li3").innerHTML=document.getElementById("li1").innerText;
+        }else {
+          document.getElementById("li3").innerHTML=(fiyat)+(indmiktari*3);
+        }
+        if ( document.getElementById("li2").innerText>document.getElementById("li1").innerText ) {
+          document.getElementById("li2").innerHTML=document.getElementById("li1").innerText;
+        }else {
+          document.getElementById("li2").innerHTML=(fiyat)+(indmiktari*4);
+        }
+      } else{
+        document.getElementById("li5").innerHTML=(fiyat)+(indmiktari);
+        document.getElementById("li4").innerHTML=(fiyat)+(indmiktari*2);
+        document.getElementById("li3").innerHTML=(fiyat)+(indmiktari*3);
+        document.getElementById("li2").innerHTML=(fiyat)+(indmiktari*4);
+      }
+        if (document.getElementById("li1").innerHTML=="") {
+          document.getElementById("li1").innerHTML=fiyat;
+        }
+
+
+        fiyat=fiyat-10;
+        //console.log(fiyat);
+        setTimeout("fiyatazalt()", 1000);
+        //fiyatazalt(fiyat);
+      }
+    </script>
+  </head>
+  <body >
+    <button onclick="fiyatazalt()">Fiyat Azalt</button>
+    <ul>
+      <li id="li1"></li>
+      <li id="li2"></li>
+      <li id="li3"></li>
+      <li id="li4"></li>
+      <li id="li5"></li>
+      <li id="li6"></li>
+    </ul>
+
+  </body>
+</html>
